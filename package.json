@@ -1,6 +1,11 @@
 {
-  "name": "root",
+  "name": "test-monorepo",
   "private": true,
+  "scripts": {
+    "start-frontend": "lerna exec --scope frontend -- yarn start",
+    "build-frontend": "lerna exec --scope frontend -- yarn build",
+    "mock-frontend-production": "lerna exec --scope frontend -- serve -s build"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "react": "^17.0.2",
@@ -13,14 +18,27 @@
     "lerna": "^4.0.0",
     "prettier": "^2.3.2"
   },
-  "scripts": {
-    "start-frontend": "lerna exec --scope frontend -- yarn start",
-    "build-frontend": "lerna exec --scope frontend -- yarn build",
-    "mock-frontend-production": "lerna exec --scope frontend -- serve -s build"
-  },
   "workspaces": {
     "packages": [
       "apps/**"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }
