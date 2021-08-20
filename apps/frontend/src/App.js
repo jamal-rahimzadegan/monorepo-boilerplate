@@ -1,6 +1,8 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
 import Button from "common/src/components/Button";
+import { axiosReq, getById } from "common/src/utils";
+
 export default function App() {
   // const getData = () => {
   //   axios
@@ -12,6 +14,18 @@ export default function App() {
   return (
     <Router>
       <Button />
+      <p id="x">x</p>
+      <p
+        onClick={() => {
+          let x = getById("x");
+          console.log(`--- x ----> `, x);
+          axiosReq.post("testApi");
+          let api = localStorage.getItem("api");
+          console.log(`--- api ----> `, api);
+        }}
+      >
+        get element
+      </p>
       {/*<Button onClick={getData} />*/}
       frontend app
     </Router>
