@@ -15,9 +15,12 @@
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
+    "autoprefixer": "9",
     "craco": "^0.0.3",
     "lerna": "^4.0.0",
-    "prettier": "^2.3.2"
+    "postcss": "7",
+    "prettier": "^2.3.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "workspaces": {
     "packages": [

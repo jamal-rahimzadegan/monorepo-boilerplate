@@ -5,6 +5,11 @@ const packages = [];
 packages.push(path.resolve(__dirname, "../common/src"));
 
 module.exports = {
+  style: {
+    postcss: {
+      plugins: [require("tailwindcss"), require("autoprefixer")],
+    },
+  },
   webpack: {
     configure: (webpackConfig, arg) => {
       const { isFound, match } = getLoader(
