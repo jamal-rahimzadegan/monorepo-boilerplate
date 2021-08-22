@@ -8,7 +8,7 @@ const STATIC_FILES = [
   "/",
   "/index.html",
   "/src/App.js",
-  "/src/index.css",
+  "/src/index.scss",
   "/src/views/home/Home.js",
   "/src/views/offline/Offline.js",
   "https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css", // caching external data from a  cdn

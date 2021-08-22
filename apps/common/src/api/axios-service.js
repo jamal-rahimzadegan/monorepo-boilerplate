@@ -1,7 +1,6 @@
 import axios from "axios";
 
 function createAxiosRequest(method, api, data = {}, headers) {
-  localStorage.setItem("api", api);
   return axios({
     method,
     baseURL: "baseUrl",
