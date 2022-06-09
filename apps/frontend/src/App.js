@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
 import Button from "common/src/components/Button";
 import { axiosReq, getById } from "common/src/utils";
-// import "common/assets/styles/index.scss";
+
 export default function App() {
   // const getData = () => {
   //   axios
@@ -14,7 +14,7 @@ export default function App() {
   return (
     <Router>
       <Button />
-      <p className="my-1" id="x">
+      <p className="my-12" id="x">
         tailwind
       </p>
       <p
